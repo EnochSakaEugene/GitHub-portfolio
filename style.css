@@ -1,0 +1,132 @@
+/* Page background like screenshot 1 */
+body {
+    font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+    background: #f4f6fb;
+    color: #111827;
+  }
+  
+  
+  /* Top nav links: small, spaced, uppercase */
+  .nav-top {
+    font-size: 0.8rem;
+    letter-spacing: 0.04em;
+    font-weight: 600;
+    color: #6b7280 !important;
+    text-transform: uppercase;
+  }
+  
+  .nav-top:hover {
+    color: #111827 !important;
+  }
+  
+  /* Hero spacing + vertical centering feel */
+  .hero {
+    position: relative;
+    padding: 4.5rem 0 6rem;
+  }
+  
+  @media (min-width: 992px) {
+    .hero {
+      min-height: calc(100vh - 88px);
+      display: flex;
+      align-items: center;
+      padding: 0;
+    }
+  }
+  
+  /* Big bold headline */
+  .hero-title {
+    font-size: clamp(2.2rem, 4vw, 3.1rem);
+    font-weight: 800;
+    line-height: 1.15;
+    margin: 0;
+  }
+  
+  /* Button style like screenshot 1 */
+  .btn-hero {
+    background: #4b4f7a;
+    border: 0;
+    color: #fff;
+    padding: 0.7rem 1.25rem;
+    border-radius: 6px;
+    font-weight: 600;
+  }
+  
+  .btn-hero:hover {
+    background: #3f436a;
+    color: #fff;
+  }
+  
+  /* Image inside hero card */
+  .hero-image-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+  }
+
+  .hero-image-card{
+    width: 700px;        /* bigger like template */
+    height: 700px;       /* taller like template */
+    border-radius: 56px;
+    overflow: hidden;
+    background: #fff;
+    box-shadow: 0 20px 40px rgba(17, 24, 39, 0.14);
+  }
+  
+  .hero-image-card > img{
+    width: 100% !important;
+    height: 100% !important;
+    max-width: none !important;
+    object-fit: cover;
+    object-position: centerr;
+    display: block;
+  }
+  
+  /* optional: nudge further right on large screens (template feel) */
+  @media (min-width: 992px){
+    .hero-image-card{
+      transform: translateX(20px);
+    }
+  }
+  
+  /* Social links pinned bottom-left inside hero */
+  .hero-social {
+    position: absolute;
+    left: 0;
+    bottom: 24px;
+    padding-left: calc(var(--bs-gutter-x) * 0.5);
+    font-size: 0.85rem;
+    color: #9ca3af;
+  }
+  
+  .hero-social a {
+    color: #9ca3af;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+  
+  .hero-social span {
+    margin: 0 8px;
+    color: #c0c4cf;
+  }
+  
+  @media (max-width: 991.98px) {
+    .hero-social {
+      position: static;
+      padding-left: 0;
+      margin-top: 2.5rem;
+    }
+  }
+
+  @media (min-width: 992px){
+    .hero .row {
+      overflow: visible;
+    }
+  }
+
+  @media (min-width: 992px){
+    .hero-image-card{
+      margin-right: -100px;   /* pushes image outside container */
+    }
+  }

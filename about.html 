@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>About Me | Enoch Eugene Saka</title>
+
+  <!-- Bootstrap CSS -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-transparent py-4">
+    <div class="container justify-content-end">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse justify-content-end" id="navMenu">
+        <ul class="navbar-nav gap-lg-4 gap-2 align-items-lg-center">
+          <li class="nav-item"><a class="nav-link nav-top" href="index.html">HOME</a></li>
+          <li class="nav-item"><a class="nav-link nav-top active" href="about.html">ABOUT ME</a></li>
+          <li class="nav-item"><a class="nav-link nav-top" href="experience.html">EXPERIENCE</a></li>
+          <li class="nav-item"><a class="nav-link nav-top" href="projects.html">PROJECTS</a></li>
+          <li class="nav-item"><a class="nav-link nav-top" href="contact.html">CONTACTS</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ABOUT HERO -->
+  <section class="about-hero">
+    <div class="container">
+      <div class="row align-items-center gy-5">
+        <div class="col-lg-6">
+          <p class="about-eyebrow">ABOUT ME</p>
+          <h1 class="about-title">Security-focused IT professional with 9+ years of experience.</h1>
+
+          <p class="about-lead">
+            I’m <strong>Enoch Eugene Saka</strong>, an Information Security Analyst and IT Systems Engineer with
+            experience securing enterprise environments, optimizing infrastructure, and supporting global teams.
+            I specialize in incident response, endpoint protection, cloud technologies, and systems administration.
+          </p>
+
+          <div class="about-quick">
+            <div class="about-stat">
+              <div class="stat-num">80%</div>
+              <div class="stat-label">ServiceNow efficiency improvement</div>
+            </div>
+            <div class="about-stat">
+              <div class="stat-num">30%</div>
+              <div class="stat-label">Reduced imaging/setup time</div>
+            </div>
+            <div class="about-stat">
+              <div class="stat-num">22</div>
+              <div class="stat-label">Office locations supported</div>
+            </div>
+            <div class="about-stat">
+              <div class="stat-num">95%</div>
+              <div class="stat-label">Remote issue resolution rate</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-6 d-flex justify-content-lg-end">
+          <div class="about-image-card">
+            <img src="images/unnamed.jpg" alt="Enoch Eugene Saka" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROFESSIONAL SUMMARY -->
+  <section class="about-section">
+    <div class="container">
+      <h2 class="section-title">Professional Summary</h2>
+      <p class="section-text">
+        My career spans IT support, systems administration, and cybersecurity operations. I’ve supported and improved
+        endpoint reliability, strengthened security posture, and delivered consistent user support across distributed teams.
+        I’m currently pursuing my M.S. in Information Systems Technology, continuing to deepen my expertise in cloud security,
+        analytics, and enterprise systems.
+      </p>
+    </div>
+  </section>
+
+  <!-- CORE COMPETENCIES -->
+  <section class="about-section">
+    <div class="container">
+      <h2 class="section-title">Core Competencies</h2>
+
+      <div class="row g-4 mt-1">
+        <div class="col-md-4">
+          <div class="about-card h-100">
+            <h5 class="card-title fw-bold">Security & Risk</h5>
+            <ul class="list-unstyled mt-3 mb-0 about-ul">
+              <li>Incident Response</li>
+              <li>Threat Analysis</li>
+              <li>Endpoint Protection</li>
+              <li>Risk Mitigation</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="about-card h-100">
+            <h5 class="card-title fw-bold">Systems & Infrastructure</h5>
+            <ul class="list-unstyled mt-3 mb-0 about-ul">
+              <li>Windows, Linux, macOS</li>
+              <li>Active Directory</li>
+              <li>VMware & Virtualization</li>
+              <li>DNS, DHCP, Networking</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <div class="about-card h-100">
+            <h5 class="card-title fw-bold">Cloud & Development</h5>
+            <ul class="list-unstyled mt-3 mb-0 about-ul">
+              <li>Microsoft Azure</li>
+              <li>Automation & Scripting</li>
+              <li>HTML/CSS/JavaScript</li>
+              <li>SQL & Database Management</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CAREER HIGHLIGHTS -->
+  <section class="about-section">
+    <div class="container">
+      <h2 class="section-title">Career Highlights</h2>
+
+      <ul class="about-list mt-3">
+        <li>Improved ServiceNow ticketing efficiency by <strong>80%</strong>.</li>
+        <li>Automated system imaging, reducing onboarding time by <strong>30%</strong>.</li>
+        <li>Led IT operations for <strong>22 office locations</strong>.</li>
+        <li>Achieved <strong>95% issue resolution</strong> in remote support environments.</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- APPROACH -->
+  <section class="about-section">
+    <div class="container">
+      <h2 class="section-title">My Approach</h2>
+      <p class="section-text">
+        I focus on building secure, scalable systems that help teams work faster and safer. I’m big on clean processes,
+        documentation, and consistent communication—because security only works when it’s usable.
+      </p>
+    </div>
+  </section>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

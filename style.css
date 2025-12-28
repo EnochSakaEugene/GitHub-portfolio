@@ -247,3 +247,161 @@ body{
       grid-template-columns: 1fr;
     }
   }
+
+  /* ----------------------------- */
+/* EXPERIENCE PAGE (additions)    */
+/* ----------------------------- */
+
+.page-hero{
+  padding: 4.5rem 0 2.5rem;
+}
+.page-eyebrow{
+  font-size: 0.85rem;
+  letter-spacing: 0.12em;
+  font-weight: 700;
+  color: #6b7280;
+  margin: 0 0 0.75rem;
+}
+.page-title{
+  font-size: clamp(2.2rem, 4vw, 3.2rem);
+  font-weight: 900;
+  line-height: 1.05;
+  margin: 0 0 1.25rem;
+  max-width: 24ch;
+}
+.page-lead{
+  color: #374151;
+  line-height: 1.8;
+  font-size: 1.05rem;
+  max-width: 75ch;
+  margin: 0;
+}
+
+.page-section{
+  padding: 4.5rem 0;
+}
+
+/* Timeline */
+.exp-timeline{
+  position: relative;
+  padding-left: 26px;
+}
+.exp-timeline::before{
+  content: "";
+  position: absolute;
+  left: 8px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: rgba(17,24,39,0.08);
+}
+
+.exp-item{
+  position: relative;
+  padding: 0 0 26px 0;
+}
+.exp-dot{
+  position: absolute;
+  left: 0;
+  top: 22px;
+  width: 18px;
+  height: 18px;
+  border-radius: 999px;
+  background: #4b4f7a;
+  box-shadow: 0 10px 22px rgba(17,24,39,0.18);
+}
+.exp-card{
+  background: #ffffff;
+  border-radius: 22px;
+  padding: 22px;
+  box-shadow: 0 18px 40px rgba(17, 24, 39, 0.08);
+  margin-left: 22px;
+}
+
+.exp-top{
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  margin-bottom: 10px;
+}
+.exp-role{
+  font-size: 1.15rem;
+  font-weight: 900;
+  margin: 0;
+}
+.exp-company{
+  margin: 4px 0 0;
+  color: #6b7280;
+  font-weight: 600;
+}
+.exp-dates{
+  margin: 0;
+  color: #6b7280;
+  font-weight: 700;
+  font-size: 0.92rem;
+}
+
+.exp-bullets{
+  margin: 14px 0 0;
+  padding-left: 18px;
+  color: #374151;
+  line-height: 1.7;
+}
+.exp-bullets li{
+  margin: 10px 0;
+}
+
+/* tags */
+.exp-tags{
+  margin-top: 16px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.exp-tags span{
+  display: inline-block;
+  background: rgba(75,79,122,0.10);
+  color: #374151;
+  font-weight: 700;
+  font-size: 0.85rem;
+  padding: 8px 10px;
+  border-radius: 999px;
+}
+
+/* CTA */
+.cta-card{
+  background: #ffffff;
+  border-radius: 22px;
+  padding: 26px;
+  box-shadow: 0 18px 40px rgba(17, 24, 39, 0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 900px;
+}
+.cta-title{
+  font-size: 1.35rem;
+  font-weight: 900;
+  margin: 0;
+}
+.cta-text{
+  margin: 0;
+  color: #374151;
+  line-height: 1.7;
+  max-width: 70ch;
+}
+
+@media (max-width: 991.98px){
+  .page-title{
+    max-width: none;
+  }
+  .exp-card{
+    margin-left: 14px;
+    padding: 18px;
+  }
+  .exp-dot{
+    top: 18px;
+  }
+}

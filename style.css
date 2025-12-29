@@ -577,3 +577,96 @@ body{
   .page-title { max-width: none; }
   .preview-frame { height: 620px; }
 }
+
+/* =========================
+   Preview Watermark (Pro)
+   ========================= */
+
+   .preview-body{
+    position: relative;
+    overflow: hidden;
+  }
+  
+  /* watermark container injected by JS */
+  .preview-watermark{
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    pointer-events: none;
+    user-select: none;
+  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+    opacity: 1;
+    transition: opacity 220ms ease, transform 220ms ease;
+  }
+  
+  /* fade watermark together with preview transition */
+  .preview-body.is-fading .preview-watermark{
+    opacity: 0;
+    transform: scale(0.98);
+  }
+  
+  /* watermark text chip */
+  .preview-watermark span{
+    display: inline-block;
+    padding: 12px 18px;
+    border-radius: 999px;
+  
+    font-weight: 800;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    font-size: clamp(0.85rem, 1.2vw, 1.05rem);
+  
+    color: rgba(17, 24, 39, 0.22);
+  
+    /* subtle glass blur behind text */
+    background: rgba(255, 255, 255, 0.20);
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+  
+    /* very soft outline so it remains readable on white certs */
+    box-shadow: 0 12px 30px rgba(17, 24, 39, 0.06);
+    border: 1px solid rgba(17, 24, 39, 0.06);
+  
+    /* diagonal vibe */
+    transform: rotate(-18deg);
+  }
+  
+  /* make watermark even more subtle on hover */
+  .preview-card:hover .preview-watermark{
+    opacity: 0.55;
+  }
+  
+  /* ensure image is under watermark */
+  .preview-img{
+    position: relative;
+    z-index: 1;
+    max-width: 100%;
+    height: auto;
+    display: block;
+    -webkit-user-drag: none;
+    user-drag: none;
+  }
+
+  .preview-body::before{
+    content: "Preview Only • Enoch Eugene Saka";
+    position: absolute;
+    inset: 0;
+    display: grid;
+    place-items: center;
+  
+    font-size: 1.3rem;
+    font-weight: 900;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+  
+    color: rgba(17, 24, 39, 0.07);
+    transform: rotate(-25deg);
+  
+    pointer-events: none;
+    user-select: none;
+    z-index: 2;
+  }

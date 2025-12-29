@@ -10,6 +10,24 @@ document.addEventListener("DOMContentLoaded", () => {
     // DETER: disable right-click inside preview area
     previewBody.addEventListener("contextmenu", (e) => e.preventDefault());
   
+    // Inject / refresh 3x watermark
+    function ensureWatermark(title) {
+      const label = title ? title : "Certificate";
+  
+      let wm = previewBody.querySelector(".preview-watermark");
+      if (!wm) {
+        wm = document.createElement("div");
+        wm.className = "preview-watermark";
+        previewBody.appendChild(wm);
+      }
+  
+      wm.innerHTML = `
+        <span>Preview Only • ${label} • Enoch Eugene Saka</span>
+        <span>Preview Only • ${label} • Enoch Eugene Saka</span>
+        <span>Preview Only • ${label} • Enoch Eugene Saka</span>
+      `;
+    }
+  
     function setPreview({ title, meta, src }) {
       previewTitle.textContent = title || "Preview";
       previewMeta.textContent = meta || "";
@@ -23,6 +41,9 @@ document.addEventListener("DOMContentLoaded", () => {
       // Fade out
       previewBody.classList.remove("is-visible");
       previewBody.classList.add("is-fading");
+  
+      // Update watermark early (so it fades too)
+      ensureWatermark(title);
   
       setTimeout(() => {
         if (!src) {
@@ -44,6 +65,9 @@ document.addEventListener("DOMContentLoaded", () => {
             img.addEventListener("dragstart", (e) => e.preventDefault());
           }
         }
+  
+        // Re-add watermark after innerHTML swap
+        ensureWatermark(title);
   
         // Fade in
         previewBody.classList.remove("is-fading");
